@@ -1,14 +1,9 @@
-var Keycloak = require('connect-keycloak');
-var hogan = require('hogan-express');
+var Keycloak = require('keycloak-connect');
 var express = require('express');
-var session = require('express-session')
+var session = require('express-session');
+var cors = require('cors');
 
 var app = express();
-
-// Register '.mustache' extension with The Mustache Express
-app.set('view engine', 'html');
-app.set('views', __dirname + '/view');
-app.engine('html', hogan);
 
 // Create a session-store to be used by both the express-session
 // middleware and the keycloak middleware.
@@ -22,6 +17,7 @@ app.use( session({
   store: memoryStore,
 } ))
 
+app.use(cors());
 
 // Provide the session store to the Keycloak so that sessions
 // can be invalidated from the Keycloak console callback.
@@ -48,18 +44,9 @@ app.use( keycloak.middleware( {
 } ));
 
 
-// A normal un-protected public URL.
-
-app.get( '/', function(req,res) {
-	res.render('index');
-} )
-
-
-app.get('/login', keycloak.protect(), function(req, res) {
-  res.render('index', {
-    result: JSON.stringify(JSON.parse(req.session['keycloak-token']), null, 4),
-    event: "1. Authentication\n2. Login"
-  });
+app.get('/product', keycloak.protect(), function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  res.send('["iphone","ipad","ipod"]');
 });
 
 

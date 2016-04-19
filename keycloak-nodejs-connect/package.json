@@ -1,0 +1,27 @@
+{
+  "name": "connect-keycloak",
+  "version": "0.0.16",
+  "description": "Keycloak Connect Middleware",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint *.js stores/*.js middleware/*.js",
+    "prepublish": "./node_modules/nsp/bin/nsp check",
+    "test": "node test/index.js"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "keycloak-auth-utils": "0.0.16",
+    "q": "^1.1.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1",
+    "tape": "^4.5.1",
+    "nsp": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keycloak/keycloak-nodejs-connect.git"
+  },
+  "bugs": "https://github.com/keycloak/keycloak-nodejs-connect/issues"
+}

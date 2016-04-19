@@ -1,0 +1,8 @@
+{
+  "realm": "devoxx",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl8BIDCfQPMSnCr9v5ed4N/j2UZS0uH9RKpnWZWWM2pwVKh02qVAE5aKwbzEaAT7Zo/YoZerH6Pdt1kv5qOfx7Di0JknsohhRtwaZYuzF+n29qgXkp3r493KJGpkT1GlBM3rty+NDZLz6abJZSDaEystjrxEtjAaQaXhDUKkbR+q1dQlIrQ1jCDiF+u91T8qdwY6wdyqXU3iwx6DIvUkE2P8ipv0i6o5LpEjbG+RN6xBWvvnntIdv0WLt/2IMdCwW7SmfqUJ3QtdDrcId5k+6YviDIlUK95PqNXWvRSHo7mB/yPpn6ZR0y1fPVrtuOvZztSXXNC/MDMR/8ab0BmWYfwIDAQAB",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "angular-client",
+  "public-client": true
+}

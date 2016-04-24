@@ -3,6 +3,8 @@
 These are the demo apps showed during the devoxxfr Keycloak Tools in Action.
 They are shanelessy inspired by the official Keycloak examples : https://github.com/keycloak/keycloak/tree/master/examples/demo-template
 
+Link to slides :  http://redhat.slides.com/sblanc/deck-2?token=tc_y0a5a#/
+
 ## Initial setup 
 * Maven and npm installed (and cordova for the hybrid client) 
 * Setup a Keycloak server : check different option on http://keycloak.github.io/docs/userguide/keycloak-server/html/server-installation.html#d4e70 and http://keycloak.jboss.org/downloads
